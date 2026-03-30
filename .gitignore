@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Secrets — never commit real keys
+.env
+.env.*
+!.env.example
+
+# Builds
+client/dist
+client/dist-ssr
+**/dist/
+
+# Logs & OS
+*.log
+.DS_Store
+.idea
+.vscode/*
+!.vscode/extensions.json
