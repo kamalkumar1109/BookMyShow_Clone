@@ -22,7 +22,7 @@ A full-stack BookMyShow clone built using the MERN stack with complete user and 
 - Publish Movies on the Platform
 
 ## 🛠 Tech Stack
-- Frontend: React, Tailwind CSS
+- Frontend: React, Ant Design
 - Backend: Node.js, Express.js
 - Database: MongoDB
 - Email Service: Mailgun

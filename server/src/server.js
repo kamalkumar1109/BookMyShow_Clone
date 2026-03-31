@@ -4,7 +4,7 @@ require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
 const app = require("./app");
 const AppDataSource = require('./data-source');
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 (async() => {
     try{
