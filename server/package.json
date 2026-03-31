@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "dotenvx run -- node src/server.js",
     "dev": "nodemon src/server.js",
     "seed-movies": "dotenvx run -- node src/seeds/movies.js"
   },
