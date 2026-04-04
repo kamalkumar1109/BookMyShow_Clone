@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const { isLoggedIn } = require("../middlewares/user");
 const { jwtSecret: JWT_SECRET } = require("../config/env");
 const crypto = require('crypto');
-const MailgunClient = require("../lib/MailGunClient");
+const MailgunClient = require("../lib/MailgunClient");
 
 const router = express.Router();
 
