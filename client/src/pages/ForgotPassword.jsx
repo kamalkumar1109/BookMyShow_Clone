@@ -22,6 +22,7 @@ const ForgotPassword = () => {
 
   return (
     <div
+      className="bms-auth-page"
       style={{
         minHeight: "60vh",
         display: "flex",
@@ -31,6 +32,7 @@ const ForgotPassword = () => {
       }}
     >
       <Card
+        className="bms-auth-card"
         style={{
           width: 420,
           backgroundColor: "#1f2533",

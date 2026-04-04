@@ -47,7 +47,7 @@ A full-stack BookMyShow clone built using the MERN stack with complete user and 
    npm run client
 
 ## 🌐 Live Demo
-(Add after deployment)
+https://bookmyshowbykamal.netlify.app/
 
 ## 🔮 Future Improvements
 - Admin Dashboard

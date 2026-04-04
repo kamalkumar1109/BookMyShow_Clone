@@ -50,16 +50,12 @@ const Layout = (props) => {
           <Menu
             mode="horizontal"
             theme="dark"
-            defaultSelectedKeys={["movies"]}
-            items={[
-              { key: "movies", label: "Movies" },
-              { key: "events", label: "Events" },
-              { key: "plays", label: "Plays" },
-            ]}
+            selectedKeys={["movies"]}
+            items={[{ key: "movies", label: "Movies" }]}
           />
         </div>
         <div className="bms-header-right">
-          <Search placeholder="Search for Movies, Events, Plays" allowClear />
+          <Search placeholder="Search movies" allowClear className="bms-header-search" />
           {isAuthenticated &&
             (user?.role === "Partner" || user?.role === "Admin") && (
             <>
@@ -130,18 +126,14 @@ const Layout = (props) => {
         </div>
       </Header>
 
-      <Content style={{ padding: "24px 16px", backgroundColor: "#0f1014" }}>
+      <Content
+        className="bms-content-wrapper"
+        style={{ padding: "24px 16px", backgroundColor: "#0f1014" }}
+      >
         {props.children}
       </Content>
 
-      <Footer
-        style={{
-          textAlign: "center",
-          backgroundColor: "#1f2533",
-          color: "#999",
-          padding: "16px 48px",
-        }}
-      >
+      <Footer className="bms-footer">
         © {new Date().getFullYear()} BookMyShow Clone. All rights reserved.
       </Footer>
     </AntLayout>

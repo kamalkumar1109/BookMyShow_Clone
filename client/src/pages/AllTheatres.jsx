@@ -44,7 +44,15 @@ const AllTheatres = () => {
         <>
           {data && data.length > 0 ? (
             <List
-              grid={{ gutter: 24, column: 3 }}
+              grid={{
+                gutter: 24,
+                column: 3,
+                xs: 1,
+                sm: 1,
+                md: 2,
+                lg: 3,
+                xl: 3,
+              }}
               dataSource={data}
               renderItem={(theatre) => (
                 <List.Item key={theatre._id}>

@@ -17,6 +17,7 @@ const SignIn = () => {
 
   return (
     <div
+      className="bms-auth-page"
       style={{
         minHeight: "60vh",
         display: "flex",
@@ -25,6 +26,7 @@ const SignIn = () => {
       }}
     >
       <Card
+        className="bms-auth-card"
         style={{
           width: 400,
           backgroundColor: "#1f2533",

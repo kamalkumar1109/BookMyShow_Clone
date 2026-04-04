@@ -138,14 +138,16 @@ const MyBookings = () => {
       )}
 
       {!isLoading && !error && bookings.length > 0 && (
-        <Table
-          rowKey="_id"
-          columns={columns}
-          dataSource={bookings}
-          pagination={{ pageSize: 8 }}
-          style={{ background: "transparent" }}
-          className="my-bookings-table"
-        />
+        <div className="bms-table-scroll">
+          <Table
+            rowKey="_id"
+            columns={columns}
+            dataSource={bookings}
+            pagination={{ pageSize: 8 }}
+            style={{ background: "transparent" }}
+            className="my-bookings-table"
+          />
+        </div>
       )}
     </div>
   );

@@ -1,7 +1,8 @@
 import React, { createContext, useEffect, useState } from "react";
+import { message } from "antd";
 import useHttp from "../hooks/useHttp";
 import { fetchProfile, loginUser } from "../lib/apis";
-import { useNavigate } from "react-router"
+import { useNavigate } from "react-router";
 
 const UserContext = createContext({
   user: null,
@@ -17,6 +18,13 @@ export const UserContextProvider = (props) => {
   const navigate = useNavigate();
 
   const { data, error, isLoading, sendRequest } = useHttp(loginUser, false);
+
+  useEffect(() => {
+    if (isLoading || data) return;
+    if (error) {
+      message.error("Email or password is incorrect.");
+    }
+  }, [isLoading, data, error]);
 
   const {
     data: profile,
