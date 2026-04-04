@@ -1,14 +1,23 @@
 const mongoose = require("mongoose");
 
-const dbUrl = process.env.MONGODB_URI;
+class AppDataSource {
+  static async connect() {
+    try {
+      console.log("🔌 Connecting to DB...");
+      console.log("👉 MONGODB_URI:", process.env.MONGODB_URI);
 
-class AppDataSource{
-    static async connect(){
-        await mongoose.connect(dbUrl);
+      await mongoose.connect(process.env.MONGODB_URI);
+
+      console.log("✅ MongoDB connected");
+    } catch (err) {
+      console.error("❌ DB CONNECTION ERROR:", err);
+      throw err; // VERY IMPORTANT
     }
-    static async disconnect(){
-        await mongoose.disconnect();
-    }
+  }
+
+  static async disconnect() {
+    await mongoose.disconnect();
+  }
 }
 
 module.exports = AppDataSource;
