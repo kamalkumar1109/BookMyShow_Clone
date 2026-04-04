@@ -51,6 +51,7 @@ const Layout = (props) => {
             mode="horizontal"
             theme="dark"
             selectedKeys={["movies"]}
+            onClick={() => navigate("/")} 
             items={[{ key: "movies", label: "Movies" }]}
           />
         </div>

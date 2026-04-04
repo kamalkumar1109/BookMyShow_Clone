@@ -22,7 +22,7 @@ const AllMovies = () => {
           marginBottom: 24,
         }}
       >
-        Movies in Mumbai
+        Trending Movies
       </h2>
       {isLoading && (
         <p style={{ color: "#ccc" }}>Loading movies...</p>
